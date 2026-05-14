@@ -16,10 +16,7 @@ version: '3.4' # For compatibility with older Docker versions
 
 services:
   new-api:
-    build:
-    context: .
-    dockerfile: Dockerfile
-    image: new-api:test
+    image: registry.cn-hangzhou.aliyuncs.com/rx-namespace/new-api:test
     container_name: new-api
     restart: always
     command: --log-dir /app/logs
