@@ -90,9 +90,10 @@ services:
 #      - new-api-network
 #    ports:
 #      - "3306:3306"  # Uncomment if you need to access MySQL from outside Docker
-  app:
+  nginx-proxy-manager:
     image: 'chishin/nginx-proxy-manager-zh:release'
     restart: always
+    container_name: nginx-proxy-manager
     ports:
       - '80:80'
       - '81:81'
