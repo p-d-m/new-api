@@ -90,6 +90,18 @@ services:
 #      - new-api-network
 #    ports:
 #      - "3306:3306"  # Uncomment if you need to access MySQL from outside Docker
+  app:
+    image: 'chishin/nginx-proxy-manager-zh:release'
+    restart: always
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - /work/nginx-manager/data:/data
+      - /work/nginx-manager/letsencrypt:/etc/letsencrypt
+    networks:
+      - new-api-network
 
 volumes:
   pg_data:
