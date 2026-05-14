@@ -96,7 +96,7 @@ services:
     container_name: nginx-proxy-manager
     ports:
       - '80:80'
-      - '81:81'
+      # - '81:81'
       - '443:443'
     volumes:
       - /work/nginx-manager/data:/data
